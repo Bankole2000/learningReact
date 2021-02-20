@@ -1,0 +1,3 @@
+>>>: npx create-react-app <app-name>
+>>>: npx json-server --watch path/to/db.json --port <port-number, 8000 e.g.>
+>>>: npm i react-router-dom@5  (where @5 is version 5)

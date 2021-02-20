@@ -6,6 +6,8 @@ const Home = () => {
   const { data: blogs, isPending, error } = useFetch(
     "http://localhost:8000/blogs/"
   );
+  const title = "Welcome to the new Blog";
+
   // let name = 'Mario'
   // const [blogs, setBlogs] = useState(
   //   null
@@ -73,7 +75,8 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>
+      <h1>{title}</h1>
+      {/* <h1>
         {name} is {age} years old
       </h1>
       <button
@@ -85,7 +88,7 @@ const Home = () => {
       </button>
       <button onClick={() => setAge(age + 1)}>Age+</button>
       <button onClick={() => setAge(age - 1)}>Age-</button>
-      <h1>Homepage</h1>
+      <h1>Homepage</h1> */}
       {isPending && <div>Loading...</div>}
       {error && <div>{error}</div>}
       {blogs && (
@@ -107,14 +110,14 @@ const Home = () => {
           <p>written by {blog.author}</p>
         </div>
       ))} */}
-      <p>
+      {/* <p>
         {name} is {age} years old
       </p>
       <button onClick={changeName}>Change Name</button>
       <button onClick={handleClick}>Click Me</button>
       <button onClick={(e) => handleClickAgain("Mario", e)}>
         Click Me Again
-      </button>
+      </button> */}
     </div>
   );
 };
